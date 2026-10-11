@@ -1,0 +1,25 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+ android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:background="@color/cream">
+ <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="20dp" android:paddingEnd="20dp" android:paddingTop="20dp" android:paddingBottom="10dp" android:gravity="center_vertical" android:orientation="horizontal">
+  <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+   <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🍽  GOFOODGO" android:textColor="@color/coral" android:textSize="14sp" android:textStyle="bold"/>
+   <TextView android:id="@+id/txtGreeting" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Hôm nay ăn gì?" android:textColor="@color/ink" android:textSize="26sp" android:textStyle="bold" android:layout_marginTop="4dp"/>
+  </LinearLayout>
+  <com.google.android.material.button.MaterialButton android:id="@+id/btnAdmin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:visibility="gone" android:text="+ Món" app:cornerRadius="20dp" app:backgroundTint="@color/coral"/>
+ </LinearLayout>
+ <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="20dp" android:layout_marginEnd="20dp" android:hint="🔎 Tìm món ngon..." style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+   <com.google.android.material.textfield.TextInputEditText android:id="@+id/etSearch" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="text" android:singleLine="true"/>
+ </com.google.android.material.textfield.TextInputLayout>
+ <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Danh mục" android:textSize="19sp" android:textStyle="bold" android:textColor="@color/ink" android:paddingStart="20dp" android:paddingTop="18dp" android:paddingBottom="8dp"/>
+ <HorizontalScrollView android:layout_width="match_parent" android:layout_height="wrap_content" android:scrollbars="none">
+  <LinearLayout android:id="@+id/categoryRow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingStart="14dp" android:paddingEnd="14dp"/>
+ </HorizontalScrollView>
+ <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Món ăn nổi bật 🔥" android:textSize="19sp" android:textStyle="bold" android:textColor="@color/ink" android:paddingStart="20dp" android:paddingTop="16dp" android:paddingBottom="10dp"/>
+ <TextView android:id="@+id/txtEmpty" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Chưa có món nào. Admin hãy thêm món đầu tiên nhé!" android:visibility="gone" android:textColor="@color/muted" android:gravity="center" android:padding="20dp"/>
+ <androidx.recyclerview.widget.RecyclerView android:id="@+id/rvFoods" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:clipToPadding="false" android:padding="12dp"/>
+ <LinearLayout android:layout_width="match_parent" android:layout_height="64dp" android:background="@color/white" android:gravity="center" android:orientation="horizontal">
+  <TextView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:text="⌂  Trang chủ" android:textStyle="bold" android:textColor="@color/coral" android:onClick="homeTab"/>
+  <TextView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:text="🛒  Giỏ hàng" android:textColor="@color/ink" android:onClick="cartTab"/>
+  <TextView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:text="◉  Tôi" android:textColor="@color/ink" android:onClick="profileTab"/>
+ </LinearLayout>
+</LinearLayout>

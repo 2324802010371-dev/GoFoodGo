@@ -1,0 +1,15 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+ android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/cream">
+ <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="22dp">
+   <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Xác nhận đơn hàng 🥡" android:textSize="26sp" android:textStyle="bold" android:textColor="@color/ink" android:layout_marginBottom="22dp"/>
+   <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Số điện thoại" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+     <com.google.android.material.textfield.TextInputEditText android:id="@+id/etPhone" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="phone"/>
+   </com.google.android.material.textfield.TextInputLayout>
+   <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Địa chỉ giao hàng" android:layout_marginTop="16dp" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+     <com.google.android.material.textfield.TextInputEditText android:id="@+id/etAddress" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textPostalAddress" android:minLines="3" android:gravity="top"/>
+   </com.google.android.material.textfield.TextInputLayout>
+   <TextView android:id="@+id/txtTotal" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tổng cộng: 0đ" android:textColor="@color/coral" android:textSize="24sp" android:textStyle="bold" android:layout_marginTop="28dp"/>
+   <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Thanh toán khi nhận hàng (COD) • Chế độ mô phỏng học tập" android:layout_marginTop="10dp" android:textColor="@color/muted"/>
+   <com.google.android.material.button.MaterialButton android:id="@+id/btnPlaceOrder" android:layout_width="match_parent" android:layout_height="55dp" android:text="ĐẶT HÀNG" android:layout_marginTop="30dp" app:cornerRadius="16dp" app:backgroundTint="@color/coral"/>
+ </LinearLayout>
+</ScrollView>

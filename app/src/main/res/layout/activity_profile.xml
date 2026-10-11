@@ -1,0 +1,16 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+ android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/cream">
+ <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="24dp" android:gravity="center_horizontal">
+  <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tài khoản của tôi" android:textSize="26sp" android:textStyle="bold" android:textColor="@color/ink"/>
+  <ImageView android:id="@+id/imgAvatar" android:layout_width="114dp" android:layout_height="114dp" android:background="@drawable/bg_circle" android:scaleType="centerCrop" android:layout_marginTop="30dp" android:contentDescription="Ảnh đại diện"/>
+  <com.google.android.material.button.MaterialButton android:id="@+id/btnPickAvatar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Đổi ảnh đại diện" app:backgroundTint="@color/coral" app:cornerRadius="18dp" android:layout_marginTop="9dp"/>
+  <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Tên hiển thị" android:layout_marginTop="24dp" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+   <com.google.android.material.textfield.TextInputEditText android:id="@+id/etName" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+  </com.google.android.material.textfield.TextInputLayout>
+  <TextView android:id="@+id/txtEmail" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="email@example.com" android:padding="16dp" android:textColor="@color/muted"/>
+  <com.google.android.material.button.MaterialButton android:id="@+id/btnSave" android:layout_width="match_parent" android:layout_height="54dp" android:text="LƯU HỒ SƠ" app:backgroundTint="@color/coral" app:cornerRadius="16dp"/>
+  <com.google.android.material.button.MaterialButton android:id="@+id/btnOrders" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Lịch sử đơn hàng" style="@style/Widget.MaterialComponents.Button.OutlinedButton" android:layout_marginTop="18dp"/>
+  <com.google.android.material.button.MaterialButton android:id="@+id/btnAdminOrders" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Quản trị đơn hàng" style="@style/Widget.MaterialComponents.Button.OutlinedButton" android:visibility="gone"/>
+  <com.google.android.material.button.MaterialButton android:id="@+id/btnLogout" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="ĐĂNG XUẤT" style="@style/Widget.MaterialComponents.Button.TextButton" android:layout_marginTop="12dp"/>
+ </LinearLayout>
+</ScrollView>

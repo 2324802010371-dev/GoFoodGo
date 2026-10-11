@@ -1,0 +1,113 @@
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cream"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Hình ảnh món ăn -->
+        <ImageView
+            android:id="@+id/imgFood"
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:background="@drawable/bg_pale"
+            android:scaleType="centerCrop"
+            android:contentDescription="Ảnh món ăn" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- Danh mục món -->
+            <TextView
+                android:id="@+id/txtCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Danh mục"
+                android:textColor="@color/coral"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <!-- Tên món ăn -->
+            <TextView
+                android:id="@+id/txtName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:text="Món ăn"
+                android:textColor="@color/ink"
+                android:textSize="29sp"
+                android:textStyle="bold" />
+
+            <!-- Giá bán -->
+            <TextView
+                android:id="@+id/txtPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="0đ"
+                android:textColor="@color/coral"
+                android:textSize="23sp"
+                android:textStyle="bold" />
+
+            <!-- Tiêu đề mô tả -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26dp"
+                android:text="Mô tả món ăn"
+                android:textColor="@color/ink"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!-- Nội dung mô tả -->
+            <TextView
+                android:id="@+id/txtDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:lineSpacingExtra="5dp"
+                android:text="Chi tiết món ăn"
+                android:textColor="@color/muted"
+                android:textSize="15sp" />
+
+            <!-- Nút thêm vào giỏ hàng -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAdd"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="35dp"
+                android:text="THÊM VÀO GIỎ HÀNG"
+                android:textColor="@android:color/white"
+                app:backgroundTint="@color/coral"
+                app:cornerRadius="16dp" />
+
+            <!-- Nút chỉnh sửa chỉ dành cho Admin -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnEdit"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="14dp"
+                android:text="CHỈNH SỬA MÓN ĂN"
+                android:textColor="@color/coral"
+                android:textStyle="bold"
+                android:visibility="gone"
+                app:cornerRadius="16dp"
+                app:strokeColor="@color/coral"
+                app:strokeWidth="2dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
